@@ -34,6 +34,14 @@ var Questions = [{
     "Bangalore",
     "Pune",
     "Mumbai"]
+}, {
+  questions: "Which is my favourite Color?",
+  answer: "Blue",
+  options: [
+    "Black",
+    "Blue",
+    "Pink",
+    "Red"]
 }];
 
 
@@ -53,7 +61,7 @@ function play() {
 }
 function Start() {
   var start = readline.question("Please Type Start to start the game!!!");
-  if (start) {
+  if (start == "Start") {
     play();
   }
 }
@@ -69,10 +77,12 @@ function game(questions, answer, options) {
   }
 }
 function finalscore(score) {
-  if (score == 2) {
+  if (score == 5) {
+    console.log("You Scored the Highest " + score);
     console.log("BRAVO!!!! You WON");
+
   } else {
-    console.log("Better luck next time!!!");
+    console.log("YOur Score is" + score + "!!!");
   }
 }
 welcome();
